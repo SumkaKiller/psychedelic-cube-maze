@@ -3,8 +3,10 @@ import { useEffect, useRef } from 'react';
 import { useGameContext } from '../contexts/GameContext';
 import { EffectComposer, Bloom, ChromaticAberration } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
+import { Vector2 } from 'three';
 import { Player } from './Player';
 import { Environment } from './Environment';
+import * as THREE from 'three';
 
 export const GameScene = () => {
   const { gameState } = useGameContext();
@@ -29,7 +31,7 @@ export const GameScene = () => {
         />
         <ChromaticAberration
           blendFunction={BlendFunction.NORMAL}
-          offset={[0.002, 0.002]}
+          offset={new Vector2(0.002, 0.002)}
         />
       </EffectComposer>
 
