@@ -13,10 +13,7 @@ export const Environment = () => {
 
   return (
     <group ref={gridRef}>
-      <gridHelper
-        args={[100, 100, '#9b87f5', '#1A1F2C']}
-        position={[0, -2, 0]}
-      />
+      <gridHelper args={[100, 100, '#9b87f5', '#1A1F2C']} position={[0, -2, 0]} />
       {Array.from({ length: 50 }).map((_, i) => (
         <mesh
           key={i}

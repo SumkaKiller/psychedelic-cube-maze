@@ -26,10 +26,7 @@ export const GameScene = () => {
       </group>
 
       <ambientLight intensity={0.2} />
-      <directionalLight
-        position={[10, 10, 5]}
-        intensity={1}
-      />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
     </>
   );
 };

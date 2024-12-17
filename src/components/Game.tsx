@@ -7,13 +7,14 @@ import { GameProvider } from '../contexts/GameContext';
 export const Game = () => {
   return (
     <GameProvider>
-      <div className="game-container relative w-full h-screen">
+      <div className="game-container">
         <Canvas
-          camera={{ position: [0, 5, 10], fov: 75 }}
+          camera={{ 
+            position: [0, 5, 10], 
+            fov: 75 
+          }}
           gl={{ 
             antialias: true,
-            alpha: false,
-            powerPreference: "high-performance",
           }}
         >
           <Suspense fallback={null}>
