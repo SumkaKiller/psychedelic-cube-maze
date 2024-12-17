@@ -31,6 +31,7 @@ export const Environment = () => {
             color="#D946EF"
             emissive="#D946EF"
             emissiveIntensity={2}
+            toneMapped={false}
           />
         </mesh>
       ))}

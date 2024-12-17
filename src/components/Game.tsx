@@ -14,8 +14,11 @@ export const Game = () => {
           gl={{ 
             antialias: true,
             alpha: false,
-            powerPreference: "high-performance"
+            powerPreference: "high-performance",
+            preserveDrawingBuffer: true
           }}
+          dpr={[1, 2]}
+          legacy={false}
         >
           <Suspense fallback={null}>
             <GameScene />
