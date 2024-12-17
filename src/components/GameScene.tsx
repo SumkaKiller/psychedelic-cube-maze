@@ -1,7 +1,6 @@
 import { useFrame } from '@react-three/fiber';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useGameContext } from '../contexts/GameContext';
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import { Player } from './Player';
 import { Environment } from './Environment';
 import * as THREE from 'three';
@@ -20,14 +19,6 @@ export const GameScene = () => {
     <>
       <color attach="background" args={['#080808']} />
       <fog attach="fog" args={['#080808', 30, 40]} />
-      
-      <EffectComposer>
-        <Bloom 
-          intensity={1.5}
-          luminanceThreshold={0.6}
-          luminanceSmoothing={0.9}
-        />
-      </EffectComposer>
 
       <group ref={groupRef}>
         <Player />
@@ -38,8 +29,6 @@ export const GameScene = () => {
       <directionalLight
         position={[10, 10, 5]}
         intensity={1}
-        castShadow
-        shadow-mapSize={[1024, 1024]}
       />
     </>
   );

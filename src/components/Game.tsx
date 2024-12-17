@@ -10,15 +10,11 @@ export const Game = () => {
       <div className="game-container relative w-full h-screen">
         <Canvas
           camera={{ position: [0, 5, 10], fov: 75 }}
-          shadows
           gl={{ 
             antialias: true,
             alpha: false,
             powerPreference: "high-performance",
-            preserveDrawingBuffer: true
           }}
-          dpr={[1, 2]}
-          legacy={false}
         >
           <Suspense fallback={null}>
             <GameScene />
