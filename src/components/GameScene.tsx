@@ -32,6 +32,8 @@ export const GameScene = () => {
         <ChromaticAberration
           blendFunction={BlendFunction.NORMAL}
           offset={new Vector2(0.002, 0.002)}
+          radialModulation={false}
+          modulationOffset={0}
         />
       </EffectComposer>
 
